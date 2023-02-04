@@ -92,10 +92,10 @@
       <a class="text-element" href="#">project IV.</a>
     </div>
 	<div class="nav-bar">
-		<a class="text-element2" href="home"> home.</a>
+		<a class="text-element2" href="/home"> home.</a>
 		<a class="text-element3" href="#"> work.</a>
-		<a class="text-element2" href="about"> about.</a>
-		<a class="text-element2" href="contact"> contact.</a>
+		<a class="text-element2" href="/about"> about.</a>
+		<a class="text-element2" href="/contact"> contact.</a>
 	</div>  
   </body>
 
