@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<title>mikey chapman.</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        max-width: 1920px;
+        max-height: 1080px;
+        font-family: 'Helvetica neue', sans-serif;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      .corner-text {
+        position: absolute;
+        font-size: 18px;
+        font-weight: 200;
+        color: black;
+        text-decoration: none;
+		letter-spacing: 2px
+      }
+      
+      .top-left {
+        top: 50px;
+        left: 50px;
+      }
+      
+      .top-right {
+        top: 50px;
+        right: 50px;
+      }
+      
+      .bottom-left {
+        bottom: 50px;
+        left: 50px;
+      }
+      
+      .bottom-right {
+        bottom: 50px;
+        right: 50px;
+      }
+      
+      @media (max-width: 767px) {
+        .corner-text {
+          position: relative;
+          text-align: center;
+          margin: 0 auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+        
+        body {
+          flex-direction: column;
+        }
+        
+        .top-left, .top-right {
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 20px 0;
+        }
+        
+        .bottom-left, .bottom-right {
+          position: relative;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your website content goes here -->
+    <img width="45%" src="/Users/mikeychapman/Downloads/portfoliobg.jpg" alt="Paris" class="center">
+    <a class="top-left corner-text" href="#">mikey chapman.</a>
+    <a class="corner-text top-right" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/projectspage.html">work.</a>
+    <a class="corner-text bottom-left" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/aboutpage.html">about.</a>
+    <a class="corner-text bottom-right" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/contactpage.html">contact.</a>
+  </body>
+</html>
