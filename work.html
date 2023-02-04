@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<title>work.</title>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .text-element {
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        margin: 50px;
+		text-decoration: none;
+		color: black;  
+      }
+      .text-element2 {
+        font-family: "Helvetica Neue";
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        margin-left: 25px;
+		margin-bottom: 50px;
+		margin-right: 25px;
+		text-decoration: none;
+		color: black;
+		opacity: 40%;
+      }
+      .text-element3 {
+        font-family: "Helvetica Neue";
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: default;
+        user-select: none;
+        margin-left: 25px;
+		margin-bottom: 50px;
+		margin-right: 25px;
+		text-decoration: line-through;
+		color: black;
+		opacity: 40%;
+	}
+      .back-button {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .nav-bar {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      } 
+      @media (max-width: 767px) {
+        body {
+          flex-direction: column;
+        }
+        .text-element {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-button" onclick="history.back()">&lt; back.</a>
+    <div>
+      <a class="text-element" href="#">project I.</a>
+      <a class="text-element" href="#">project II.</a>
+      <a class="text-element" href="#">project III.</a>
+      <a class="text-element" href="#">project IV.</a>
+    </div>
+	<div class="nav-bar">
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/landingpage.html"> home.</a>
+		<a class="text-element3" href="#"> work.</a>
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/aboutpage.html"> about.</a>
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/contactpage.html"> contact.</a>
+	</div>  
+  </body>
+
+</html>
+
+
+<!--onclick="history.back() to replace 'href' in back button>

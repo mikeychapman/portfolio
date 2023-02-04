@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<title>about.</title>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .text-element {
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: default;
+        user-select: none;
+        margin-top: 5px;
+		margin-bottom: 20px;
+		text-decoration: none;
+		color: black;
+		display: block
+      }
+      .text-element2 {
+        font-family: "Helvetica Neue";
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        margin-left: 25px;
+		margin-bottom: 50px;
+		margin-right: 25px;
+		text-decoration: none;
+		color: black;
+		opacity: 40%;
+      }
+      .text-element3 {
+        font-family: "Helvetica Neue";
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: default;
+        margin-left: 25px;
+		margin-bottom: 50px;
+		margin-right: 25px;
+		text-decoration: line-through;
+		color: black;
+		opacity: 40%;
+	}
+      .text-element4 {
+        font-family: "Helvetica Neue";
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        margin: 1px;
+		text-decoration: none;
+		color: black;
+		opacity: 40%;
+		align-content: center;
+	}
+      .back-button {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .nav-bar {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      } 
+	  .textbox {
+		position: absolute;
+		display: block;
+		text-align: center;		
+	  }
+      @media (max-width: 767px) {
+        body {
+          flex-direction: column;
+        }
+        .text-element {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-button" onclick="history.back()">&lt; back.</a>
+    <div class="textbox">
+      <a class="text-element">
+	mikey chapman is a twenty two year old graphic<br>
+    designer from watford, england.
+	<p>he taught himself how to use photoshop<br>
+	at thirteen years of age, and then went on<br>
+	to study it exclusively at college and university.</p>
+	<p>he graduated from the university of<br>
+	hertfordshire in september 2022 and currently<br>
+	works at eo group in london.</p></a>
+
+    </div>
+	<div class="nav-bar">
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/landingpage.html"> home.</a>
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/projectspage.html"> work.</a>
+		<a class="text-element3" href="#"> about.</a>
+		<a class="text-element2" href="/Users/mikeychapman/Desktop/MikeyChapmanPortfolioPages/contactpage.html"> contact.</a>
+	</div>  
+  </body>
+
+</html>
