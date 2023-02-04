@@ -21,7 +21,7 @@
         user-select: none;
         margin: 50px;
 		text-decoration: none;
-		color: #000000;  
+		color: black;  
       }
       .text-element2 {
         font-family: "Helvetica Neue";
@@ -35,7 +35,7 @@
 		margin-bottom: 50px;
 		margin-right: 25px;
 		text-decoration: none;
-		color: #000000;
+		color: black;
 		opacity: 40%;
       }
       .text-element3 {
@@ -50,7 +50,7 @@
 		margin-bottom: 50px;
 		margin-right: 25px;
 		text-decoration: line-through;
-		color: #000000;
+		color: black;
 		opacity: 40%;
 	}
       .back-button {
@@ -74,13 +74,25 @@
         width: 100%;
       } 
       @media (max-width: 767px) {
+        .corner-text {
+          position: relative;
+          text-align: center;
+          margin: 0 auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+        }
+      }
         body {
           flex-direction: column;
         }
-        .text-element {
-          display: block;
-        }
-      }
     </style>
   </head>
   <body>
