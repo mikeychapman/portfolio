@@ -1,73 +1,67 @@
 <!DOCTYPE html>
 <html>
-	<title>about.</title>
+	<title>work.</title>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-        margin: 0;
-        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        max-width: 1920px;
+        max-height: 1080px;
+        font-family: 'Helvetica neue', sans-serif;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        overflow: hidden;
       }
-      .text-element {
-        font-family: "Helvetica Neue";
+      
+      .corner-text {
+        position: absolute;
         font-size: 18px;
         font-weight: 200;
-        letter-spacing: 2px;
-        text-align: center;
-        cursor: default;
-        user-select: none;
-        margin-top: 5px;
-		margin-bottom: 20px;
-		text-decoration: none;
-		color: black;
-		display: block
+        color: black;
+        text-decoration: none;
+		letter-spacing: 2px;
       }
-      .text-element2 {
-        font-family: "Helvetica Neue";
-        font-size: 12px;
-        font-weight: 200;
-        letter-spacing: 2px;
-        text-align: center;
-        cursor: pointer;
-        user-select: none;
-        margin-left: 25px;
-		margin-bottom: 50px;
-		margin-right: 25px;
-		text-decoration: none;
-		color: black;
-		opacity: 40%;
+      
+      .top-left {
+        position: relative;
+		margin: 20px;
       }
-      .text-element3 {
-        font-family: "Helvetica Neue";
-        font-size: 12px;
-        font-weight: 200;
-        letter-spacing: 2px;
-        text-align: center;
-        cursor: default;
-        margin-left: 25px;
-		margin-bottom: 50px;
-		margin-right: 25px;
-		text-decoration: line-through;
-		color: #000000;
-		opacity: 40%;
-	}
-      .text-element4 {
-        font-family: "Helvetica Neue";
-        font-size: 12px;
-        font-weight: 200;
-        letter-spacing: 2px;
-        text-align: center;
-        cursor: pointer;
-        user-select: none;
-        margin: 1px;
-		text-decoration: none;
-		color: #000000;
-		opacity: 40%;
-		align-content: center;
-	}
+      
+      .top-right {
+       	position: relative;
+		  margin: 20px;
+      }
+      
+      .bottom-left {
+        position: relative;
+		  margin: 20px;
+      }
+      
+      .bottom-right {
+        position: relative;
+		  margin: 20px;
+      }
+      
+      @media (max-width: 767px) {
+        .corner-text {
+          position: relative;
+          text-align: center;
+          margin: 20px auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+		  }
       .back-button {
         position: absolute;
         top: 50px;
@@ -80,27 +74,32 @@
         cursor: pointer;
         user-select: none;
       }
-
-	  .textbox {
-		position: absolute;
-		display: block;
-		text-align: center;		
-	  }
-      @media (max-width: 767px) {
+}
+        
         body {
           flex-direction: column;
-        }
-        .text-element {
-          display: block;
-        }
+        }      .back-button {
+      position: absolute;
+        top: 50px;
+        left: 50px;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
       }
-    </style>
+			
+	}
+		
+  
+  </style>
   </head>
   <body>
-    <a class="back-button" onclick="history.back()">&lt; back.</a>
-    <div class="textbox">
-      <a class="text-element">
-	mikey chapman is a twenty two year old graphic<br>
+    <!-- Your website content goes here -->
+	<a class="back-button" onclick="history.back()">&lt; back.</a>
+    <a class="top-left corner-text" align="center">	mikey chapman is a twenty two year old graphic<br>
     designer from watford, england.
 	<p>he taught himself how to use photoshop<br>
 	at thirteen years of age, and then went on<br>
@@ -108,9 +107,5 @@
 	<p>he graduated from the university of<br>
 	hertfordshire in september 2022 and currently<br>
 	works at eo group in london.</p></a>
-
-    </div>
-  
   </body>
-
 </html>
