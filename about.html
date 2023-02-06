@@ -4,6 +4,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+		.textbox {
+			max-width: 600px;
+			position: absolute;
+			text-align: center;
+			
+		}
       body {
         width: 100%;
         height: 100vh;
@@ -74,6 +80,11 @@
         cursor: pointer;
         user-select: none;
       }
+		  .textbox {
+			  text-align: center;
+			  width: auto;
+			
+		  }
 }
         
         body {
@@ -97,15 +108,17 @@
   </style>
   </head>
   <body>
+  <p>
     <!-- Your website content goes here -->
-	<a class="back-button" onclick="history.back()">&lt; back.</a>
-    <a class="top-left corner-text" align="center">	mikey chapman is a twenty two year old graphic<br>
-    designer from watford, england.
-	<p>he taught himself how to use photoshop<br>
-	at thirteen years of age, and then went on<br>
-	to study it exclusively at college and university.</p>
-	<p>he graduated from the university of<br>
-	hertfordshire in september 2022 and currently<br>
-	works at eo group in london.</p></a>
+    <a class="back-button" onClick="history.back()">&lt; back.</a> <a class="top-left corner-text textbox"><p align="center"> mikey chapman is a twenty two year old graphic
+      designer from watford, england.</a>
+  <p align="center"><a class="top-left corner-text textbox" align="center">
+	he taught himself how to use photoshop
+    at thirteen years of age, and then went on
+    to study it exclusively at college and university.</a></p>
+<p align="center"><a  class="top-left corner-text textbox" align="center">
+	he graduated from the university of
+    hertfordshire in september 2022 and currently
+    works at eo group in london.</a> </p>
   </body>
 </html>
