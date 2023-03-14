@@ -40,7 +40,6 @@
 			align-items: center;
 			justify-content: center;
 			height: 100vh;
-			padding: 0 20px; /* add padding to the sides */
 		}
 		
 		.centered-text {
@@ -48,11 +47,11 @@
 		}
 		
 		img {
-			max-width: 100%;
+			max-width: 500px;
 			height: auto;
 		}
 		
-		@media screen and (min-width: 768px) {
+		@media screen and (max-width: 768px) {
 			h1 {
 				font-size: 2em;
 			}
@@ -60,6 +59,10 @@
 			p {
 				font-size: 1.2em;
 			}
+			img {
+			max-width: 90%;
+			height: auto;
+		}
 		}
 	</style>
 </head>
