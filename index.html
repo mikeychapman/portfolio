@@ -1,60 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>mikey chapman.</title>
-<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
-	
-  <meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
-  <meta property="og:title" content="mikey chapman." />
-  <meta property="og:description" content="welcome to my portfolio." />
-	
+	<title>My Webpage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		h1, p {
+			font-weight: 300; /* light font weight */
+			color: #333; /* dark grey color */
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.2em;
+			line-height: 1.5;
+		}
+
+		h1 strong, p strong {
+			font-weight: 500; /* regular font weight */
+			color: #000; /* black color */
+		}
+		
+		a {
+			text-decoration: none;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		.centered-text {
+			text-align: center;
+		}
+		
+		img {
+			max-width: 600px;
+			height: auto;
+		}
+	</style>
 </head>
 
-<style>
-	
-	body {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-	
-	.container{
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-		text-align: center;
-	}
-	
-	.smalltext {
-		font-family: helvetica neue;
-		font-weight: 100;
-		font-size: 15px;
-		letter-spacing: 2px;
-		color: #999999;
-		text-align: center;
-		text-decoration: none;
-	}
-	
-	.largetext {
-		font-family: helvetica neue;
-		font-weight: 100;
-		font-size: 25px;
-		letter-spacing: 2px;
-		color: #000000;
-		text-align: center;
-		text-decoration: none;
-	}
-
-</style>
 	
 <body>
 	<div class="container">
-		<div class="verticalalign">
-			<p class="largetext">mikey chapman.</p><br><br>
-			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/Stadium.png" width="650px">
-			<p><br><br><a class="smalltext" href="/home.html">[click here to enter]</a></p>
+		<div class="centered-text">
+			<h1>Mikey Chapman</h1>
+			<br><br>
+			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/Stadium.png" alt="Vicarage Road">
+			<br><br>
+			<a href="/home.html"><p>[click here to enter]</p></a>
 		</div>
 	</div>
+
+
 </body>
 </html>
