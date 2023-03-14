@@ -1,72 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>about.</title>
-<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
+	
+  <meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
+  <meta property="og:title" content="mikey chapman." />
+  <meta property="og:description" content="welcome to my portfolio." />
+	<style>
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		h2, h1, p {
+			font-weight: 100; /* light font weight */
+			letter-spacing: 2px;
+			color: #333; /* dark grey color */
+		}
+
+		h1 {
+			font-size: 1.5em;
+			text-align: center;
+		}
+		
+		h2 {
+			font-size: 1em;
+			text-align: left;
+			margin-top: 50px;
+			margin-left: 50px;
+			margin-bottom: -50px;
+		}
+
+		p {
+			font-size: 1em;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1 strong, p strong {
+			font-weight: 500; /* regular font weight */
+			color: #000; /* black color */
+		}
+		
+		a {
+			text-decoration: none;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		.centered-text {
+			text-align: center;
+			max-width: 65%;
+		}
+		
+		img {
+			max-width: 500px;
+			height: auto;
+		}
+		
+		.back-button {
+			text-align: left;
+		}
+		
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 1.2em;
+			}
+			
+			p {
+				font-size: 1em;
+			}
+			h2 {
+				font-size: 1em;
+				text-align: left;
+				margin-top: 50px;
+				margin-left: 20px;
+				margin-bottom: -50px;
+			}
+			img {
+				max-width: 75%;
+				height: auto;
+			}
+			.centered-text {
+				text-align: center;
+				max-width: 80%;
+			}
+		}
+	</style>
 </head>
-
-<style>
-	
-	.container{
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-		text-align: center;
-	}
-	
-	.smalltext {
-		font-family: helvetica neue;
-		font-weight: 100;
-		font-size: 15px;
-		letter-spacing: 2px;
-		color: #999999;
-		text-align: center;
-	}
-	
-	.largetext {
-		font-family: helvetica neue;
-		font-weight: 100;
-		font-size: 25px;
-		letter-spacing: 2px;
-		color: #000000;
-		text-align: center;
-		text-decoration: none;
-	}
-	
-      .back-button {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        font-family: "Helvetica Neue";
-        font-size: 18px;
-        font-weight: 100;
-        letter-spacing: 2px;
-        text-align: center;
-        user-select: none;
-		color: #999999;
-		cursor: pointer;
-      }
-	
-      .verticalalign {
-		  width: 550px;
-		  padding: 25px;
-      }
-
-</style>
 	
 <body>
+	<a class="back-button" onclick="history.back()"><h2>&lt; back.</h2></a>
 	<div class="container">
-	<a class="back-button" onclick="history.back()">&lt; back.</a>
-		<div class="verticalalign largetext">
-			<p>mikey chapman is a twenty-three year old graphic designer from watford, england.</p>
-			<p>he started to teach himself how to use the adobe creative suite at the age of thirteen before deciding to persue it further at college and university.</p>
-			<p>he graduated from amersham college in may 2019 before starting at the university of hertfordshire that september, from which he graduated in september 2022. he currently works at eo group in london.</p>
-			<p>as an avid watford fc fan, he travels round the country to watch the hornets play and aspires to complete the 92.</p>
-			<p class="smalltext">[26/92]</p>
+		<div class="centered-text">
+			
+			<h1>Mikey Chapman is a 23-year-old graphic designer from Watford, England.</h1>
+			
+			<h1>He started to teach himself how to use the Adobe Creative Suite at the age of 13 before deciding to persue it further at Amersham College.</h1>
+			
+			<h1>he graduated from Amersham College in May 2019 with a Level 3 Extended Diploma in Graphic Design before continuing his studies at the University of Hertfordshire in September 2019. He graduated from university with an Upper Second Class BA (Hons) on 22nd July 2022.</h1>
+			
+			<h1>As an avid Watford FC fan, he travels round the country to watch the Hornets play and aspires to complete the 92.</h1>
+			
+			<p>[26/92]</p>
+	  
 		</div>
-	</div>
+</div>
 </body>
 </html>
+
