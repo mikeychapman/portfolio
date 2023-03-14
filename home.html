@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mikey Chapman - Home</title>
+	<title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
 	
@@ -13,7 +13,7 @@
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		}
 
-		h1, p {
+		h2, h1, p {
 			font-weight: 100; /* light font weight */
 			letter-spacing: 2px;
 			color: #333; /* dark grey color */
@@ -22,6 +22,14 @@
 		h1 {
 			font-size: 1.5em;
 			text-align: center;
+		}
+		
+		h2 {
+			font-size: 1em;
+			text-align: left;
+			margin-top: 50px;
+			margin-left: 50px;
+			margin-bottom: -50px;
 		}
 
 		p {
@@ -52,8 +60,12 @@
 		}
 		
 		img {
-			max-width: 600px;
+			max-width: 500px;
 			height: auto;
+		}
+		
+		.back-button {
+			text-align: left;
 		}
 		
 		@media screen and (max-width: 768px) {
@@ -64,27 +76,30 @@
 			p {
 				font-size: 1em;
 			}
+			h2 {
+				font-size: 1em;
+				text-align: left;
+				margin-top: 50px;
+				margin-left: 20px;
+				margin-bottom: -50px;
+			}
 			img {
-			max-width: 85%;
-			height: auto;
-		}
-
+				max-width: 75%;
+				height: auto;
+			}
 		}
 	</style>
 </head>
-
-<map name="seating">
-	<area shape="rect" coords="408,121,498,191" alt="work." href="/work.html">
-	<area shape="rect" coords="408,234,498,304" alt="about." href="/about.html">
-	<area shape="rect" coords="276,306,347,397" alt="contact." href="/contact.html">
-	<area shape="rect" coords="2,80,92,135" alt="away days." href="/awaydays.html">
-</map>
 	
 <body>
+	<a class="back-button" onclick="history.back()"><h2>&lt; back.</h2></a>
 	<div class="container">
 		<div class="centered-text">
-<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/SeatSelect3.png" width="500px" height="398" usemap="#seating" alt="seating selection page">
-		</div>
-	</div>
+		  <a href="/projects.html"><h1>Projects</h1></a>
+			<a href="/about.html"><h1>About</h1></a>
+			<a href="/contact.html"><h1>Contact</h1></a>
+			<a href="/awaydays.html"><h1>Away Days</h1></a>
+	  </div>
+</div>
 </body>
 </html>
