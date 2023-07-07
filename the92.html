@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
 	
-  	<meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
-  	<meta property="og:title" content="The 92" />
-  	<meta property="og:description" content="Mikey Chapman" />
+  	<meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png">
+  	<meta property="og:title" content="The 92">
+  	<meta property="og:description" content="Mikey Chapman">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&amp;display=swap" rel="stylesheet">
 	
 	<style>
 		body {
@@ -75,57 +75,55 @@
 			max-width: 65%;
 		}
 		
-		img {
-			height: auto;
-			width: 130px;
-			padding: 3px;
-			
-		}
+
 		
-		video {
-			max-width: 750px;
-			height: auto;
-		}
+		
 		
 		.back-button {
 			text-align: left;
 		}
 		
-		.image-container {
-			position: relative;
-		}
+.image-container {
+  position: relative;
+}
+
+.thumbnail-image {
+  width: 130px;
+	padding: 2px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox-image {
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
 		
-		.image-container img {
-			max-width: 100%;
-			height: auto;
-			margin: 5px;
-			cursor: pointer;
-		}
-
-		.image-popup {
-			display: none;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			
-			padding: 0px;
-			text-align: center;
-			overflow: auto;
-		}
-
-		.image-popup img {
-			max-width: 100px;
-			height: auto;
-		}
-
-		.image-container:hover .image-popup {
-			display: block;
-		}
 		
-		.caption {
-			max-width: 100px;
-		}
+
 		
 		@media screen and (max-width: 768px) {
 			h1 {
@@ -142,10 +140,9 @@
 				margin-left: 20px;
 				margin-bottom: -20px;
 			}
-			img {
-				width: 100px;
-				height: auto;
-			}
+			.thumbnail-image {
+    width: 100px;
+  }
 			
 			video {
 				max-width: 100%;
@@ -183,12 +180,14 @@
         .image-row img {
             max-width: 100%;
             height: auto;
-            margin: 5px;
+            margin: 3px;
         }
+		
+		
 	</style>
 </head>
 	
-<body>
+<body cz-shortcut-listen="true">
 	
 	
 	<a class="back-button" href="/football.html"><h2>Back</h2></a>
@@ -207,610 +206,419 @@
 			
 		</div>
 		
+		<!-- add following code under each teams 'alt' tag within the <img> brackets:
+
+onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/PHOTO.png')
+
+and change badge opacity to 100%
+
+-->
+		
 		
         <div class="image-row" style="padding-bottom: 100px;">
             
-			
-			<!-- CODE FOR NO POP UP AND BLANK -->
-<!--
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
+<!-- ACCRINGTON			 	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style=" opacity:10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Accrington.png" alt="#" >
+		</div>
+<!-- AFC BOURNEMOUTH 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style=" opacity:10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AFCBournemouth.png" alt="#">
+		</div>
+<!-- AFC WIMBLEDON 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AFCWimbledon.png" alt="#" >
+		</div>
+<!-- ARSENAL	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Arsenal.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Arsenal.png')">
+		</div>
+<!-- ASTON VILLA 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AstonVilla.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla4.png')">
+		</div>
+<!-- BARNSLEY 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Barnsley.png" alt="#" >
+		</div>
+<!-- BARROW					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Barrow.png" alt="#" >
+		</div>
+<!-- BIRMINGHAM 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Birmingham.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Birmingham2.png')">
+		</div>
+<!-- BLACKBURN 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Blackburn.png" alt="#" >
+		</div>
+<!-- BLACKPOOL				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Blackpool.png" alt="#" >
+		</div>
+<!-- BOLTON					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Bolton.png" alt="#" >
+		</div>
+<!-- BRADFORD 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Bradford.png" alt="#" >
+		</div>
+<!-- BRENTFORD				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Brentford.png" alt="#" >
+		</div>
+<!-- BRIGHTON				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Brighton.png" alt="#" >
+		</div>
+<!-- BRISTOL CITY 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/BristolCity.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/BristolCity2.png')">
+		</div>
+<!-- BRISTOL ROVERS			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/BristolRovers.png" alt="#" >
+		</div>
+<!-- BURNLEY	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Burnley2.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Burnley2.png')">
+		</div>
+<!-- BURTON					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Burton.png" alt="#" >
+		</div>
+<!-- CAMBRIDGE 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cambridge.png" alt="#" >
+		</div>
+<!-- CARDIFF				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cardiff.png" alt="#" >
+		</div>
+<!-- CARLISLE				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Carlisle.png" alt="#" >
+		</div>
+<!-- CHARLTON	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Charlton.png" alt="Aston Villa" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Charlton2.png')">
+		</div>
+<!-- CHELSEA 				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Chelsea.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Chelsea2.png')">
+		</div>
+<!-- CHELTENHAM				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cheltenham.png" alt="#" >
+		</div>
+<!-- COLCHESTER				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Colchester.png" alt="#" >
+		</div>
+<!-- COVENTRY 				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Coventry.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Coventry2.png')">
+		</div>
+<!-- CRAWLEY 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Crawley.png" alt="#" >
+		</div>
+<!-- CREWE					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Crewe.png" alt="#" >
+		</div>
+<!-- CRYSTAL PALACE 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/CrystalPalace.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/CrystalPalace2.png')">
+		</div>
+<!-- DERBY	 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Derby.png" alt="#" >
+		</div>
+<!-- DONCASTER				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Doncaster.png" alt="#" >
+		</div>
+<!-- EVETRON	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Everton.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Everton2.png')">
+		</div>
+<!-- EXETER 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Exeter.png" alt="#" >
+		</div>
+<!-- FLEETWOOD				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Fleetwood.png" alt="#" >
+		</div>
+<!-- FOREST GREEN			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ForestGreen.png" alt="#" >
+		</div>
+<!-- FULHAM 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Fulham.png" alt="#" >
+		</div>
+<!-- GILLINGHAM				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Gillingham.png" alt="#" >
+		</div>
+<!-- GRIMSBY				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Grimsby.png" alt="#" >
+		</div>
+<!-- HARROGATE				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Harrogate.png" alt="#" >
+		</div>
+<!-- HUDDERSFIELD			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Huddersfield.png" alt="#" >
+		</div>
+<!-- HULL	 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Hull.png" alt="#" >
+		</div>
+<!-- IPSWICH				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Ipswich.png" alt="#" >
+		</div>
+<!-- LEEDS					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leeds.png" alt="#" >
+		</div>
+<!-- LEICESTER 				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leicester.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Leicester2.png')">
+		</div>
+<!-- LEYTON ORIENT			-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leyton.png" alt="#" >
+		</div>
+<!-- LINCOLN				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Lincoln.png" alt="#" >
+		</div>
+<!-- LIVERPOOL				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Liverpool.png" alt="#" >
+		</div>
+<!-- L*TON	 				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Scum.png" alt="Aston Villa" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Scum2.png')">
+		</div>
+<!-- MANCHESTER CITY	 	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ManCity.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/ManCity2.png')">
+		</div>
+<!-- MANCHESTER UNITED 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ManUtd.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/ManUtd2.png')">
+		</div>
+<!-- MANSFIELD 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Mansfield.png" alt="#" >
+		</div>
+<!-- MIDDLESBROUGH			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Middlesbrough.png" alt="#" >
+		</div>
+<!-- MILLWALL	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Millwall.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Millwall2.png')">
+		</div>
+<!-- MK DONS 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/MKDons.png" alt="#" >
+		</div>
+<!-- MORECAMBE				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Morecambe.png" alt="#" >
+		</div>
+<!-- NEWCASTLE	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Newcastle.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Newcastle2.png')">
+		</div>
+<!-- NEWPORT 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Newport.png" alt="#" >
+		</div>
+<!-- NORTHAMPTON			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Northampton.png" alt="#" >
+		</div>
+<!-- NORWICH	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Norwich.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Norwich2.png')">
+		</div>
+<!-- NOTTS COUNTY			-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/NottsCounty.png" alt="#" >
+		</div>
+<!-- NOTTINGHAM FOREST		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/NottsForest.png" alt="#" >
+		</div>
+<!-- OXFORD					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Oxford.png" alt="#" >
+		</div>
+<!-- PETERBOROUGH 			-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Peterbrough.png" alt="#" >
+		</div>
+<!-- PLYMOUTH				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Plymouth.png" alt="#" >
+		</div>
+<!-- PORT VALE				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/PortVale.png" alt="#" >
+		</div>
+<!-- PORTSMOUTH				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Portsmouth.png" alt="#" >
+		</div>
+<!-- PRESTON			 	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Preston.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Preston2.png')">
+		</div>
+<!-- QPR			 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/QPR.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/QPR2.png')">
+		</div>
+<!-- READING			 	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Reading.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Reading2.png')">
+		</div>
+<!-- ROTHERHAM		 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Rotherham.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Rotherham2.png')">
+		</div>
+<!-- SALFORD				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Salford.png" alt="#" >
+		</div>
+<!-- SHEFFIELD UNITED		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/SheffieldUtd.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/SheffieldUtd2.png')">
+		</div>
+<!-- SHEFFIELD WEDNESDAY	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/SheffieldWed.png" alt="#" >
+		</div>
+<!-- SHREWSBURY 			-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Shrewsbury.png" alt="#" >
+		</div>
+<!-- SOUTHAMPTON 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Southampton.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Southampton2.png')">
+		</div>
+<!-- STEVENAGE 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stevenage.png" alt="#" >
+		</div>
+<!-- STOCKPORT				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stockport.png" alt="#" >
+		</div>
+<!-- STOKE					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stoke.png" alt="#" >
+		</div>
+<!-- SUNDERLAND				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Sunderland.png" alt="#" >
+		</div>
+<!-- SUTTON					-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Sutton.png" alt="#" >
+		</div>
+<!-- SWANSEA	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Swansea.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Swansea2.png')">
+		</div>
+<!-- SWINDON 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Swindon.png" alt="#" >
+		</div>
+<!-- TOTTENHAM				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Tottenham.png" alt="#" >
+		</div>
+<!-- TRANMERE				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Tranmere.png" alt="#" >
+		</div>
+<!-- WALSALL				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Walsall.png" alt="#" >
+		</div>
+<!-- WATFORD 				-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Watford.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Watford2.png')">
+		</div>
+<!-- WEST BROM 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/WestBrom.png" alt="#" >
+		</div>
+<!-- WEST HAM	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/WestHam.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/WestHam2.png')">
+		</div>
+<!-- WIGAN	 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wigan.png" alt="#" >
+		</div>
+<!-- WOLVES		 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wolves.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Wolves2.png')">
+		</div>
+<!-- WREXHAM 				-->			
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 10%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wrexham.png" alt="#" >
+		</div>
+<!-- WYCOMBE	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wycombe.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Wycombe.png')">
+		</div>
 
--->
+
 			
-			<!-- CODE FOR POPUP AND BRIGHT -->
-<!--    		
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="">
-				</div>
-        	</div>
--->			
-			<!-- START FROM HERE -->
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Accrington.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
+	
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AFCBournemouth.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AFCWimbledon.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Arsenal.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Arsenal.png" alt="">
-				</div>
-        	</div>
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/AstonVilla.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="">
-				</div>
-        	</div>
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Barnsley.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Barrow.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
+<!-- DO NOT TOUCH!!!!!! -->
 			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Birmingham.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Birmingham.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Blackburn.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Blackpool.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Bolton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Bradford.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Brentford.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Brighton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/BristolCity.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/BristolCity.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/BristolRovers.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Burnley2.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Burnley.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Burton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cambridge.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cardiff.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Carlisle.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Charlton.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Charlton.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Chelsea.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Chelsea.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Cheltenham.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Colchester.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Coventry.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Coventry.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Crawley.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Crewe.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/CrystalPalace.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/CrystalPalace.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Derby.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Doncaster.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Everton.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Everton.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Exeter.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Fleetwood.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ForestGreen.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Fulham.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Gillingham.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Grimsby.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Harrogate.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Huddersfield.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Hull.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Ipswich.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leeds.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leicester.png" alt="">
-    			<div class="image-popup">
-					<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Leicester.png" alt="">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Leyton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Lincoln.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Liverpool.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Scum.png" alt="">
-    			<div class="image-popup">
-					<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Scum.png" alt="">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ManCity.png" alt="">
-    			<div class="image-popup">
-					<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/ManCity.png" alt="">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/ManUtd.png" alt="">
-    			<div class="image-popup">
-					<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/ManUtd.png" alt="">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Mansfield.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Middlesbrough.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Millwall.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Millwall.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/MKDons.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Morecambe.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Newcastle.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Newcastle.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Newport.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Northampton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Norwich.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Norwich.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/NottsCounty.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/NottsForest.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Oxford.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Peterbrough.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Plymouth.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/PortVale.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Portsmouth.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Preston.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Preston.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/QPR.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/QPR.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Reading.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Reading.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Rotherham.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Rotherham.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Salford.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/SheffieldUtd.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/SheffieldUtd.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/SheffieldWed.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Shrewsbury.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Southampton.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Southampton.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stevenage.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stockport.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Stoke.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Sunderland.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Sutton.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Swansea.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Swansea.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Swindon.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Tottenham.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Tranmere.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Walsall.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Watford.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Watford.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/WestBrom.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/WestHam.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/WestHam.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wigan.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wolves.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Wolves.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wrexham.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Badges/Wycombe.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/Wycombe.png" alt="">
-				</div>
-        	</div>
+ <!-- Lightbox overlay -->
+<div id="overlay">
+  <!-- Enlarged image -->
+  <img id="lightbox-image" src="." alt="">
+  <!-- Close button -->
+  <span id="close" onclick="closeLightbox()">&times;</span>
+</div>
+
+<script>
+  // Function to open the lightbox with the clicked image
+  function openLightbox(imageUrl) {
+    var lightboxImg = document.getElementById('lightbox-image');
+    lightboxImg.src = imageUrl;
+    document.getElementById('overlay').style.display = 'flex';
+  }
+
+  // Function to close the lightbox
+  function closeLightbox() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
 			
     </div>		
 		
@@ -818,6 +626,7 @@
 	</div>
 
 		
-</body>
 
-</html>
+
+
+</body></html>
