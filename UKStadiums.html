@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
 	
-  	<meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
-  	<meta property="og:title" content="Other UK Stadiums" />
-  	<meta property="og:description" content="Mikey Chapman" />
+  	<meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png">
+  	<meta property="og:title" content="Other UK Stadiums">
+  	<meta property="og:description" content="Mikey Chapman">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&amp;display=swap" rel="stylesheet">
 	
 	<style>
 		body {
@@ -75,57 +75,55 @@
 			max-width: 65%;
 		}
 		
-		img {
-			height: auto;
-			width: 130px;
-			padding: 3px;
-			
-		}
+
 		
-		video {
-			max-width: 750px;
-			height: auto;
-		}
+		
 		
 		.back-button {
 			text-align: left;
 		}
 		
-		.image-container {
-			position: relative;
-		}
+.image-container {
+  position: relative;
+}
+
+.thumbnail-image {
+  width: 130px;
+	padding: 2px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox-image {
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
 		
-		.image-container img {
-			max-width: 100%;
-			height: auto;
-			margin: 5px;
-			cursor: pointer;
-		}
-
-		.image-popup {
-			display: none;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			
-			padding: 0px;
-			text-align: center;
-			overflow: auto;
-		}
-
-		.image-popup img {
-			max-width: 100px;
-			height: auto;
-		}
-
-		.image-container:hover .image-popup {
-			display: block;
-		}
 		
-		.caption {
-			max-width: 100px;
-		}
+
 		
 		@media screen and (max-width: 768px) {
 			h1 {
@@ -142,10 +140,9 @@
 				margin-left: 20px;
 				margin-bottom: -20px;
 			}
-			img {
-				width: 100px;
-				height: auto;
-			}
+			.thumbnail-image {
+    width: 100px;
+  }
 			
 			video {
 				max-width: 100%;
@@ -183,12 +180,14 @@
         .image-row img {
             max-width: 100%;
             height: auto;
-            margin: 5px;
+            margin: 3px;
         }
+		
+		
 	</style>
 </head>
 	
-<body>
+<body cz-shortcut-listen="true">
 	
 	
 	<a class="back-button" href="/football.html"><h2>Back</h2></a>
@@ -207,72 +206,72 @@
 			
 		</div>
 		
+		<!-- add following code under each teams 'alt' tag within the <img> brackets:
+
+onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/PHOTO.png')
+
+and change badge opacity to 100%
+
+-->
+		
 		
         <div class="image-row" style="padding-bottom: 100px;">
             
-			
-			<!-- CODE FOR NO POP UP AND BLANK -->
-<!--
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="" style="opacity: 10%">
-    			<div class="image-popup">
-				</div>
-			</div>
+<!-- ENGLAND			 	-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style=" opacity:100%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/England.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/England2.png')">
+		</div>
+<!-- NORTHWOOD		 		-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style=" opacity:100%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Northwood.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Northwood2.png')">
+		</div>
+<!-- WEALDSTONE 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" style="opacity: 100%" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Wealdstone.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Wealdstone2.png')">
+		</div>
+<!-- UXBRIDGE	 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Uxbridge.png" alt="#" onclick="openLightbox('https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Uxbridge.png')">
+		</div>
+<!-- BOREHAMWOOD 			-->
+		<div class="image-container">
+  		<img class="thumbnail-image" src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Borehamwood.png" alt="#" onclick="openLightbox('/images/Borhamwood2.png')">
+		</div>
 
--->
-			
-			<!-- CODE FOR POPUP AND BRIGHT -->
-<!--    		
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/The92/Photos/AstonVilla.png" alt="">
-				</div>
-        	</div>
--->			
-			<!-- START FROM HERE -->
+
+
 			
 			
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/England.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Wembley.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Northwood.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Northwood.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Wealdstone.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Wealdstone.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Uxbridge.png" alt="">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Uxbridge.png" alt="">
-				</div>
-        	</div>
-			
-			<div class="image-container">
-    			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Borehamwood.png" alt="" style="opacity: 100%">
-    			<div class="image-popup">
-      			<img src="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/OtherUKGrounds/Grounds/Borehamwood.png" alt="">
-				</div>
-        	</div>
+	
 			
 			
 			
 			
 			
+			
+<!-- DO NOT TOUCH!!!!!! -->
+			
+ <!-- Lightbox overlay -->
+<div id="overlay">
+  <!-- Enlarged image -->
+  <img id="lightbox-image" src="." alt="">
+  <!-- Close button -->
+  <span id="close" onclick="closeLightbox()">&times;</span>
+</div>
+
+<script>
+  // Function to open the lightbox with the clicked image
+  function openLightbox(imageUrl) {
+    var lightboxImg = document.getElementById('lightbox-image');
+    lightboxImg.src = imageUrl;
+    document.getElementById('overlay').style.display = 'flex';
+  }
+
+  // Function to close the lightbox
+  function closeLightbox() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
 			
     </div>		
 		
@@ -280,6 +279,7 @@
 	</div>
 
 		
-</body>
 
-</html>
+
+
+</body></html>
