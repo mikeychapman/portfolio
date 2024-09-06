@@ -1,158 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Mikey Chapman</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://dcvnv1ldeiz2n.cloudfront.net/Random/icon.png">
-	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
-	<link rel="shortcut icon" type="image/png" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
-	
-    <meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
-    <meta property="og:title" content="Mikey Chapman" />
-    <meta property="og:description" content="Welcome to my portfolio!" />
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
-	
-	<style>
-		body {
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			position: relative;
-			overflow: hidden; /* Prevent scrollbars from showing up */
-		}
-
-		h2, h1, p, a {
-			font-weight: 300; /* light font weight */
-			letter-spacing: 2px;
-			color: #333; /* dark grey color */
-			font-family: 'Poppins', sans-serif;
-		}
-
-		h1 {
-			font-size: 1.5em;
-			text-align: center;
-		}
-
-		p {
-			font-size: 1em;
-			line-height: 1.5;
-			text-align: center;
-		}
-
-		h1 strong, p strong {
-			font-weight: 500; /* regular font weight */
-			color: #000; /* black color */
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mikeychapman_!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+			margin-top: 100px;
+            padding-left: 20px;
+            background-color: white;
+            color: black;
+            line-height: 1; /* Consistent line height */
+        }
 		
 		a {
 			text-decoration: none;
+			color: black;
 		}
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		
-		.centered-text {
-			text-align: center;
-		}
-		
-		img {
-			max-width: 500px;
-			height: auto;
-		}
-		
-		@media screen and (max-width: 768px) {
-			h1 {
-				font-size: 1.2em;
-			}
-			
-			p {
-				font-size: 1em;
-			}
-			img {
-				max-width: 75%;
-				height: auto;
-			}
-		}
-		
-		/* CSS for random images */
-		.image-popup {
-			position: absolute;
-			opacity: 1;
-			width: 300px; /* Set a default size for the image popups */
-			height: 300px;
-			background-size: cover;
-			background-position: center;
-			transition: opacity 0.5s ease-in-out;
-			pointer-events: none; /* Allow clicks to pass through */
-		}
-		.image1 { background-image: url('https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/Designs/PG-Dennis-1.png'); }
-		
-		/* Add more images as needed */
-
-		/* Hide image popups on mobile */
-		@media screen and (max-width: 768px) {
-			.image-popup {
-				display: none;
-			}
-		}
-	</style>
+        .title {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .menu-item {
+            cursor: pointer;
+            margin: 10px 0;
+            font-weight: 100;
+            line-height: 1; /* Consistent line height */
+        }
+        .dropdown {
+            display: none; /* Initially hide dropdown */
+            margin-left: 20px; /* Consistent indentation */
+        }
+        .dropdown.open {
+            display: block; /* Show dropdown when open class is applied */
+        }
+        .dropdown div {
+            font-weight: 100;
+            padding-left: 10px; /* Consistent padding */
+            line-height: 1.5; /* Consistent line height */
+            cursor: pointer; /* Pointer cursor for dropdown items */
+        }
+        .dropdown a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer; /* Pointer cursor for links */
+        }
+        .centered-image {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        @media (min-width: 768px) {
+            .centered-image {
+                display: block;
+            }
+        }
+    </style>
 </head>
-	
 <body>
-	<div class="container">
-		<div class="centered-text">
-			<h1>Mikey Chapman</h1>
-			<br><br>
-			<img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/LogoGif3.gif" alt="Logo" style="height: 375px;">
-			<br><br>
-			<a href="/home"><p>[click here to enter]</p></a>
-		</div>
-	</div>
-	
-	<!-- Invisible click area -->
-	<div id="click-area" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+    <div class="title">mikeychapman_!</div>
+    <div class="menu-item" onclick="toggleDropdown('dropdown1')">projects</div>
+    <div id="dropdown1" class="dropdown">
+        <div><a href="/sportcheck"></a>sport check</a></div>
+        <div><a href="/thetoastclub"></a>toast club</a></div>
+        <div><a href="/orbitproperty"></a>orbit property</a></div>
+        <div><a href="/playergraphics"></a>player graphics</a></div>
+        <div><a href="/watfordfc"></a>watford fc</a></div>
+        <div><a href="/posters"></a>posters</a></div>
+        <div><a href="/47"></a>'47 brand'</a></div>
+        <div><a href="/afcstaustell"></a>afc st. austell</a></div>
+        <div>liverpool fc [coming soon]</div>
+    </div>
+    
+    <div class="menu-item"><a href="/about">about</a></div>
+   
+    <div class="menu-item" onclick="toggleDropdown('dropdown3')">contact</div>
+    <div id="dropdown3" class="dropdown">
+        <div><a href="https://www.linkedin.com/in/mikeyjc/" target="_blank">linkedin</a></div>
+        <div><a href="https://www.instagram.com/mikeyjc_/" target="_blank">instagram</a></div>
+        <div><a href="https://x.com/MikeyJC_" target="_blank">x / twitter</a></div>
+    </div>
+    
+    <div class="menu-item" onclick="toggleDropdown('dropdown4')">football</div>
+    <div id="dropdown4" class="dropdown">
+        <div onclick="toggleSubDropdown('subdropdown4')">watford away days</div>
+        <div id="subdropdown4" class="dropdown" style="padding-top: 5px; padding-bottom: 5px;">
+            <div><a href="prem21-22">premier league 2021/22</a></div>
+            <div><a href="champ22-23">championship 2022/23</a></div>
+            <div><a href="champ23-24">championship 2023/24</a></div>
+            <div><a href="champ24-25">championship 2024/25</a></div>
+        </div>
+        <div><a href="/the92">the 92</a></div>
+        <div><a href="/otherstadiums">other stadiums</a></div>
+    </div>
 
-	<!-- Random image popups -->
-	<div class="image-popup image1"></div>
-	
-	<!-- Add more image divs as needed -->
+    <img id="centeredImage" class="centered-image" alt="Centered Image">
 
-	<script>
-		// JavaScript to handle click and display a random image
-		const images = document.querySelectorAll('.image-popup');
-		const clickArea = document.getElementById('click-area');
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.classList.toggle('open');
+        }
 
-		// Event listener for clicks
-		document.body.addEventListener('click', (e) => {
-			// Check if the click was on a link
-			if (e.target.tagName.toLowerCase() === 'a') {
-				return;
-			}
+        function toggleSubDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.classList.toggle('open');
+        }
 
-			// Check screen width and disable feature on mobile
-			if (window.innerWidth <= 768) {
-				return;
-			}
-
-			// Get random image
-			const randomImage = images[Math.floor(Math.random() * images.length)];
-			
-			// Clone the image to allow multiple instances
-			const clone = randomImage.cloneNode(true);
-
-			// Set the position
-			clone.style.left = `${e.clientX - 50}px`; // Center the image
-			clone.style.top = `${e.clientY - 50}px`;
-			
-			// Add to the body
-			document.body.appendChild(clone);
-		});
-	</script>
+        // Random image selection for desktop version
+        window.onload = function() {
+            if (window.innerWidth >= 768) {
+                var images = [
+                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/AsciiLogo.png',
+                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/SketchLogo.png',
+                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/PaintLogo.png',
+					
+					'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/LogoGif3.gif',
+                ];
+                var randomImage = images[Math.floor(Math.random() * images.length)];
+                document.getElementById('centeredImage').src = randomImage;
+                document.getElementById('centeredImage').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
