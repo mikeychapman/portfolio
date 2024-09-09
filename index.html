@@ -10,17 +10,17 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-			margin-top: 100px;
+            margin-top: 100px;
             padding-left: 20px;
             background-color: white;
             color: black;
             line-height: 1; /* Consistent line height */
         }
-		
-		a {
-			text-decoration: none;
-			color: black;
-		}
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
         .title {
             font-size: 24px;
             font-weight: 300;
@@ -50,19 +50,21 @@
             color: black;
             cursor: pointer; /* Pointer cursor for links */
         }
-        .centered-image {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            max-width: 80%;
-            max-height: 80%;
+        .image-container {
+            text-align: center; /* Center the image horizontally */
+            margin: 0px 0; /* Space around the image */
+			z-index: -1;
+			
         }
-        @media (min-width: 768px) {
-            .centered-image {
-                display: block;
+        .image-container img {
+            height: 750px;
+            max-width: 100%; /* Responsive width */
+            
+        }
+        /* Hide image on mobile screens */
+        @media (max-width: 768px) {
+            .image-container {
+                display: none;
             }
         }
     </style>
@@ -104,7 +106,10 @@
         <div><a href="/otherstadiums">other stadiums</a></div>
     </div>
 
-    <img id="centeredImage" class="centered-image" alt="Centered Image">
+    <!-- Image section -->
+    <div class="image-container">
+        <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/AsciiLogo.png" alt="Centered Image">
+    </div>
 
     <script>
         function toggleDropdown(id) {
@@ -115,22 +120,6 @@
         function toggleSubDropdown(id) {
             var dropdown = document.getElementById(id);
             dropdown.classList.toggle('open');
-        }
-
-        // Random image selection for desktop version
-        window.onload = function() {
-            if (window.innerWidth >= 768) {
-                var images = [
-                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/AsciiLogo.png',
-                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/SketchLogo.png',
-                    'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/PaintLogo.png',
-					
-					'https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/LogoGif3.gif',
-                ];
-                var randomImage = images[Math.floor(Math.random() * images.length)];
-                document.getElementById('centeredImage').src = randomImage;
-                document.getElementById('centeredImage').style.display = 'block';
-            }
         }
     </script>
 </body>
