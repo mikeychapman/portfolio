@@ -52,14 +52,12 @@
         }
         .image-container {
             text-align: center; /* Center the image horizontally */
-            margin: 0px 0; /* Space around the image */
-			z-index: -1;
-			
+            margin: 0; /* Remove space around the image */
         }
         .image-container img {
             height: 750px;
-            max-width: 100%; /* Responsive width */
-            
+            width: auto; /* Maintain aspect ratio, no responsive width */
+            display: inline-block; /* Centered horizontally */
         }
         /* Hide image on mobile screens */
         @media (max-width: 768px) {
