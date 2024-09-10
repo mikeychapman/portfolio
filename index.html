@@ -10,13 +10,25 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            margin-top: 100px;
-            padding-left: 20px;
+            margin: 0;
+            padding: 0;
             background-color: white;
             color: black;
             line-height: 1; /* Consistent line height */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            min-height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Prevent scrollbars */
         }
         
+        .content {
+            position: absolute;
+            top: 100px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+        }
+
         a {
             text-decoration: none;
             color: black;
@@ -52,12 +64,23 @@
         }
         .image-container {
             text-align: center; /* Center the image horizontally */
-            margin: 0; /* Remove space around the image */
+            position: fixed; /* Fix image position */
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            z-index: -1; /* Ensure it stays behind other content */
         }
         .image-container img {
-            height: 750px;
-            width: auto; /* Maintain aspect ratio, no responsive width */
-            display: inline-block; /* Centered horizontally */
+            max-width: 100vw; /* Responsive width */
+            max-height: 100vh; /* Responsive height */
+            height: auto;
+            width: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent inline spacing issues */
         }
         /* Hide image on mobile screens */
         @media (max-width: 768px) {
@@ -68,45 +91,46 @@
     </style>
 </head>
 <body>
-    <div class="title">mikeychapman_!</div>
-    <div class="menu-item" onclick="toggleDropdown('dropdown1')">projects</div>
-    <div id="dropdown1" class="dropdown">
-        <div><a href="/sportcheck">sport check</a></div>
-        <div><a href="/thetoastclub">toast club</a></div>
-        <div><a href="/orbitproperty">orbit property</a></div>
-        <div><a href="/playergraphics">player graphics</a></div>
-        <div><a href="/watfordfc">watford fc</a></div>
-        <div><a href="/posters">posters</a></div>
-        <div><a href="/47">'47 brand</a></div>
-        <div><a href="/afcstaustell">afc st. austell</a></div>
-        <div>liverpool fc [coming soon]</div>
-    </div>
-    
-    <div class="menu-item"><a href="/about">about</a></div>
-   
-    <div class="menu-item" onclick="toggleDropdown('dropdown3')">contact</div>
-    <div id="dropdown3" class="dropdown">
-        <div><a href="https://www.linkedin.com/in/mikeyjc/" target="_blank">linkedin</a></div>
-        <div><a href="https://www.instagram.com/mikeyjc_/" target="_blank">instagram</a></div>
-        <div><a href="https://x.com/MikeyJC_" target="_blank">x / twitter</a></div>
-    </div>
-    
-    <div class="menu-item" onclick="toggleDropdown('dropdown4')">football</div>
-    <div id="dropdown4" class="dropdown">
-        <div onclick="toggleSubDropdown('subdropdown4')">watford away days</div>
-        <div id="subdropdown4" class="dropdown" style="padding-top: 5px; padding-bottom: 5px;">
-            <div><a href="prem21-22">premier league 2021/22</a></div>
-            <div><a href="champ22-23">championship 2022/23</a></div>
-            <div><a href="champ23-24">championship 2023/24</a></div>
-            <div><a href="champ24-25">championship 2024/25</a></div>
-        </div>
-        <div><a href="/the92">the 92</a></div>
-        <div><a href="/otherstadiums">other stadiums</a></div>
-    </div>
-
-    <!-- Image section -->
     <div class="image-container">
         <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/AsciiLogo.png" alt="Centered Image">
+    </div>
+    
+    <div class="content">
+        <div class="title">mikeychapman_!</div>
+        <div class="menu-item" onclick="toggleDropdown('dropdown1')">projects</div>
+        <div id="dropdown1" class="dropdown">
+            <div><a href="/sportcheck">sport check</a></div>
+            <div><a href="/thetoastclub">toast club</a></div>
+            <div><a href="/orbitproperty">orbit property</a></div>
+            <div><a href="/playergraphics">player graphics</a></div>
+            <div><a href="/watfordfc">watford fc</a></div>
+            <div><a href="/posters">posters</a></div>
+            <div><a href="/47">'47 brand</a></div>
+            <div><a href="/afcstaustell">afc st. austell</a></div>
+            <div>liverpool fc [coming soon]</div>
+        </div>
+
+        <div class="menu-item"><a href="/about">about</a></div>
+       
+        <div class="menu-item" onclick="toggleDropdown('dropdown3')">contact</div>
+        <div id="dropdown3" class="dropdown">
+            <div><a href="https://www.linkedin.com/in/mikeyjc/" target="_blank">linkedin</a></div>
+            <div><a href="https://www.instagram.com/mikeyjc_/" target="_blank">instagram</a></div>
+            <div><a href="https://x.com/MikeyJC_" target="_blank">x / twitter</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleDropdown('dropdown4')">football</div>
+        <div id="dropdown4" class="dropdown">
+            <div onclick="toggleSubDropdown('subdropdown4')">watford away days</div>
+            <div id="subdropdown4" class="dropdown" style="padding-top: 5px; padding-bottom: 5px;">
+                <div><a href="prem21-22">premier league 2021/22</a></div>
+                <div><a href="champ22-23">championship 2022/23</a></div>
+                <div><a href="champ23-24">championship 2023/24</a></div>
+                <div><a href="champ24-25">championship 2024/25</a></div>
+            </div>
+            <div><a href="/the92">the 92</a></div>
+            <div><a href="/otherstadiums">other stadiums</a></div>
+        </div>
     </div>
 
     <script>
