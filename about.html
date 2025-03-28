@@ -1,130 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
-	
-  <meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
-  <meta property="og:title" content="About" />
-  <meta property="og:description" content="Mikey Chapman" />
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
-	
-	<style>
-		body {
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
+    
+    <meta property="og:image" content="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/shareimage.png" />
+    <meta property="og:title" content="About" />
+    <meta property="og:description" content="Mikey Chapman" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, p, a {
+            font-weight: 100;
+            letter-spacing: 1px;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        h2 {
+            font-size: 1em;
+            text-align: left;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-bottom: -50px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+            max-width: 100%;
+        }
+        
+        .image-container {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 100%; /* Ensures same height as text container */
+        }
+        
+        .image-container img {
+            max-width: 250px;
+            height: 100%; /* Makes the image take full height of container */
+            object-fit: cover; /* Crops the image while maintaining width */
+            display: block;
+        }
+
+        .text-container {
+            max-width: 600px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Aligns text vertically with image */
+            height: 100%; /* Ensures same height as image container */
+			margin-top: 0px;
+        }
+
+        .back-button {
+            text-align: left;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .image-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+				display: none;
+            }
+            .text-container {
+                text-align: center;
+            }
 			
-		}
-
-		h2, h1, p, a {
-			font-weight: 300; /* light font weight */
-			letter-spacing: 2px;
-			color: #333; /* dark grey color */
-			font-family: 'Poppins', sans-serif;
-		}
-
-		h1 {
-			font-size: 1.5em;
-			text-align: center;
-		}
-		
-		h2 {
-			font-size: 1em;
-			text-align: left;
-			margin-top: 50px;
-			margin-left: 50px;
-			margin-bottom: -50px;
-			cursor: pointer;
-		}
-
-		p {
-			font-size: 1em;
-			line-height: 1.5;
-			text-align: center;
-		}
-
-		h1 strong, p strong {
-			font-weight: 500; /* regular font weight */
-			color: #000; /* black color */
-		}
-		
-		a {
-			text-decoration: none;
-		}
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin-top: 250px;
-		}
-		
-		.centered-text {
-			text-align: center;
-			max-width: 65%;
-		}
-		
-		img {
-			max-width: 500px;
-			height: auto;
-		}
-		
-		.back-button {
-			text-align: left;
-		}
-		
-		@media screen and (max-width: 768px) {
 			h1 {
-				font-size: 1em;
+				text-align: center;
 			}
 			
 			p {
-				font-size: 0.7em;
-			}
-			h2 {
-				font-size: 1em;
-				text-align: left;
-				margin-top: 50px;
-				margin-left: 20px;
-				margin-bottom: -20px;
-			}
-			img {
-				max-width: 75%;
-				height: auto;
-			}
-			.centered-text {
 				text-align: center;
-				max-width: 80%;
 			}
-			.container {
-				margin-top: 100px;
-			}
-		}
-	</style>
+        }
+    </style>
 </head>
-	
 <body>
-	<a class="back-button" href="/"><h2>Back</h2></a>
-	<div class="container">
-		<div class="centered-text">
-			
-			<h1>Mikey Chapman is a 25-year-old graphic designer from Watford, England.</h1>
-			
-			<h1>He started to teach himself how to use the Adobe Creative Suite at the age of 13 before deciding to persue it further at Amersham College.</h1>
-			
-			<h1>He graduated from Amersham College in May 2019 with a Level 3 Extended Diploma in Graphic Design before continuing his studies at the University of Hertfordshire in September 2019. He graduated from university with an Upper Second Class BA (Hons) on 22nd July 2022.</h1>
-
-			<h1>Now an Artworker at '47 Brand, he looks to continue his career within the sports design industry.
-			
-			<h1>As an avid Watford FC fan, he travels round the country to watch the Hornets play and aspires to complete the 92.</h1>
-			
-			<p style="opacity: 20%">This site was built by Mikey Chapman using HTML and Adobe Dreamweaver</p>
-	  
-		</div>
-</div>
+    <a class="back-button" href="/"><h2>Back</h2></a>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/Me-About.png" alt="Profile Image">
+        </div>
+        <div class="text-container">
+            <h1>Mikey Chapman is a 25-year-old graphic designer from Watford, England. He started to teach himself how to use the Adobe Creative Suite at the age of 13 before deciding to pursue it further at Amersham College. He graduated from Amersham College in May 2019 with a Level 3 Extended Diploma in Graphic Design before continuing his studies at the University of Hertfordshire in September 2019. He graduated from university with an Upper Second Class BA (Hons) on 22nd July 2022. Now an Artworker at '47 Brand, he looks to continue his career within the sports design industry. As an avid Watford FC fan, he travels round the country to watch the Hornets play and aspires to complete the 92.</h1>
+            <p style="opacity: 20%">This site was built by Mikey Chapman using HTML and Adobe Dreamweaver</p>
+        </div>
+    </div>
 </body>
 </html>
-
