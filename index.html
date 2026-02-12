@@ -91,7 +91,7 @@ body {
 /* ===== Menu ===== */
 .menu-bar-vertical {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 4px;
     align-items: center;
     margin-top: 30px;
@@ -120,6 +120,7 @@ body {
 .menu-bar-vertical a:hover {
     color: #000000;
 }
+
 
 
 /* ===== Overlay ===== */
@@ -165,8 +166,7 @@ body {
     color: #555;
 }
 
-/* ===== Hide background image on mobile ===== */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     #background-image {
         display: none;
     }
@@ -188,6 +188,9 @@ body {
 		font-size: 15pt;
 		
 	}
+	}
+	
+	
 </style>
 </head>
 
