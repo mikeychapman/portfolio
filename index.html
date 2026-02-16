@@ -1,164 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://mikeychapmanfiles.s3.amazonaws.com/Portfolio/favicon.png">
-    <title>mikeychapman_!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: black;
-            line-height: 1; /* Consistent line height */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-            justify-content: center; /* Center content vertically */
-            min-height: 100vh; /* Full viewport height */
-            overflow: hidden; /* Prevent scrollbars */
-        }
-        
-		p {
-			cursor: default;
-			margin-bottom: 0px;
-			font-weight: 300;
-		}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mikeychapman_!</title>
 
-        .content {
-            position: absolute;
-            top: 100px; /* Adjust as needed */
-            left: 20px; /* Adjust as needed */
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        .title {
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-        .menu-item {
-            cursor: pointer;
-            margin: 10px 0;
-            font-weight: 100;
-            line-height: 1; /* Consistent line height */
-        }
-        .dropdown {
-            display: none; /* Initially hide dropdown */
-            margin-left: 20px; /* Consistent indentation */
-        }
-        .dropdown.open {
-            display: block; /* Show dropdown when open class is applied */
-        }
-        .dropdown div {
-            font-weight: 100;
-            padding-left: 10px; /* Consistent padding */
-            line-height: 1.5; /* Consistent line height */
-            cursor: pointer; /* Pointer cursor for dropdown items */
-        }
-        .dropdown a {
-            text-decoration: none;
-            color: black;
-            cursor: pointer; /* Pointer cursor for links */
-        }
-        .image-container {
-            text-align: center; /* Center the image horizontally */
-            position: fixed; /* Fix image position */
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-            z-index: -1; /* Ensure it stays behind other content */
-        }
-        .image-container img {
-            max-width: 100vw; /* Responsive width */
-            max-height: 100vh; /* Responsive height */
-            height: auto;
-            width: auto; /* Maintain aspect ratio */
-            display: block; /* Prevent inline spacing issues */
-        }
-        /* Hide image on mobile screens */
-        @media (max-width: 768px) {
-            .image-container {
-                display: none;
-            }
-        }
-    </style>
+<style>
+/* ===== Body ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== Page Content ===== */
+#page-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    transition: filter 0.3s;
+}
+
+/* ===== Background Image ===== */
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/bgimg.svg");
+    background-repeat: no-repeat;
+    background-position: center 150px;
+    background-size: 80%;
+    z-index: -1;
+    transition: filter 0.3s;
+}
+
+/* ===== Blur Effect ===== */
+.blur-page {
+    filter: blur(8px);
+}
+
+/* ===== TV ===== */
+.tv-wrapper {
+    position: relative;
+    width: 600px;
+    max-width: none;
+    filter: drop-shadow(0 25px 25px rgba(0,0,0,0.25));
+}
+
+.screen {
+    position: absolute;
+    top: 9%;
+    left: 23.5%;
+    width: 50%;
+    height: 63%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-image {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.middle-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -49%);
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+/* ===== MENU ===== */
+.menu-bar-vertical {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.menu-bar-vertical span,
+.menu-bar-vertical a {
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 12px;
+    color: dimgrey;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.menu-bar-vertical span:hover,
+.menu-bar-vertical a:hover {
+    color: #000;
+}
+
+a2 {
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+/* ===== Overlay ===== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.overlay-content {
+    --overlay-opacity: 0.5;
+    background: rgba(255, 255, 255, var(--overlay-opacity));
+    padding: 40px 60px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.overlay-content a {
+    color: black;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.overlay-content a:hover {
+    color: #555;
+}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 750px) {
+
+    /* Hide background */
+    #background-image {
+        display: none;
+    }
+
+    body {
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    /* Stack menu vertically and center */
+    .menu-bar-vertical {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 25px;
+    }
+
+    .menu-bar-vertical span,
+    .menu-bar-vertical a {
+        font-size: 18px;
+    }
+
+    .overlay-content a {
+        font-size: 15px;
+    }
+
+    a2 {
+        font-size: 15pt;
+    }
+
+    /* Allow TV to overflow horizontally */
+    .tv-wrapper {
+        width: 120%;
+        max-width: none;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="image-container">
-        <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoDesigns/LogoGlass.png" alt="Centered Image">
-    </div>
-    
-    <div class="content">
-        <div class="title">mikeychapman_!</div>
-        <div class="menu-item" onclick="toggleDropdown('dropdown1')">projects</div>
-        <div id="dropdown1" class="dropdown">
-           
-            <div> <p>work</p></div>
-            <div><a href="/47xSportsTeams">47 brand x football clubs</a></div>
-            
-            <div> <p>personal projects</p></div>
-            <div><a href="/thetoastclub">toast club</a></div>
-            <div><a href="/orbitproperty">orbit property</a></div>
-            <div><a href="/sportcheck">sport check</a></div>
-            <div><a href="/watfordfc">watford fc</a></div>
-            <div><a href="/northwoodfc">northwood fc</a></div>
-            
-            <div> <p>extras</p></div>
-			<div><a href="/posters">posters</a></div>
-            <div><a href="/sportsgraphics">sports graphics</a></div>
-            <div><a href="/oneminutebriefs">one minute briefs</a></div>
-            <div><a href="/coverart">cover art</a></div>
-        
-        </div>
 
-        <div class="menu-item"><a href="/about">about</a></div>
-       
-        <div class="menu-item" onclick="toggleDropdown('dropdown3')">contact</div>
-        <div id="dropdown3" class="dropdown">
-            <div><a href="https://www.linkedin.com/in/mikeyjc/" target="_blank">linkedin</a></div>
-            <div><a href="https://www.instagram.com/mikeyjc_/" target="_blank">instagram</a></div>
-            <div><a href="https://x.com/MikeyJC_" target="_blank">x / twitter</a></div>
+<div id="background-image"></div>
+
+<div id="page-content">
+    <div class="tv-wrapper">
+        <div class="screen">
+            <canvas id="noise" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1;"></canvas>
+            <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/LogoSpinTV.gif" alt="Middle Content" class="middle-gif">
         </div>
-        
-        <div class="menu-item" onclick="toggleDropdown('dropdown4')">football</div>
-        <div id="dropdown4" class="dropdown">
-            <div onclick="toggleSubDropdown('subdropdown4')">watford away days</div>
-            <div id="subdropdown4" class="dropdown" style="padding-top: 5px; padding-bottom: 5px;">
-                <div><a href="prem21-22">premier league 2021/22</a></div>
-                <div><a href="champ22-23">championship 2022/23</a></div>
-                <div><a href="champ23-24">championship 2023/24</a></div>
-                <div><a href="champ24-25">championship 2024/25</a></div>
-                <div><a href="champ25-26">championship 2025/26</a></div>
-            </div>
-            <div><a href="/the92">the 92</a></div>
-            <div><a href="/otherstadiums">other stadiums</a></div>
-        </div>
+        <img src="https://mikeychapmanfiles.s3.eu-west-2.amazonaws.com/Portfolio/Homepage/TV.png" class="tv-image" alt="CRT TV">
     </div>
 
-    <script>
-        function toggleDropdown(id) {
-            var dropdown = document.getElementById(id);
-            dropdown.classList.toggle('open');
-        }
+    <div class="menu-bar-vertical">
+        <span data-menu="menu-projects">projects</span>
+        <span><a href="/about">about</a></span>
+        <span data-menu="menu-personal">contact</span>
+        <span data-menu="menu-extras">football</span>
+    </div>
+</div>
 
-        function toggleSubDropdown(id) {
-            var dropdown = document.getElementById(id);
-            dropdown.classList.toggle('open');
+<!-- ===== Overlay Menus ===== -->
+<div class="overlay" id="menu-projects">
+    <div class="overlay-content">
+        <a2>WORK</a2>
+        <a href="/47xSportsTeams">47 x football clubs</a>
+        <br>
+        <a2>PERSONAL PROJECTS</a2>
+        <a href="/thetoastclub">the toast club</a>
+        <a href="/orbitproperty">orbit property</a>
+        <a href="/sportcheck">sport check</a>
+        <a href="/watfordfc">watford fc</a>
+        <a href="/northwoodfc">northwood fc</a>
+        <br>
+        <a2>EXTRAS</a2>
+        <a href="/sportsgraphics">sports graphics</a>
+        <a href="/posters">posters</a>
+        <a href="/oneminutebriefs">one minute briefs</a>
+        <a href="/coverart">cover art</a>
+    </div>
+</div>
+
+<div class="overlay" id="menu-personal">
+    <div class="overlay-content">
+        <a href="https://x.com/MikeyJC_" target="_blank">twitter</a>
+        <a href="https://www.instagram.com/mikeyjc_/" target="_blank">instagram</a>
+        <a href="https://www.linkedin.com/in/mikey-chapman-9aa2b5394/" target="_blank">linkedin</a>
+    </div>
+</div>
+
+<div class="overlay" id="menu-extras">
+    <div class="overlay-content">
+        <a2>STADIUMS</a2>
+        <a href="/the92">the ninety-two</a>
+        <a href="/otherstadiums">other stadiums</a>
+        <br>
+        <a2>WATFORD AWAY DAYS</a2>
+        <a href="/prem21-22">premier league 2021/22</a>
+        <a href="/champ22-23">championship 2022/23</a>
+        <a href="/champ23-24">championship 2023/24</a>
+        <a href="/champ24-25">championship 2024/25</a>
+        <a href="/champ25-26">championship 2025/26</a>
+    </div>
+</div>
+
+<script>
+const menuItems = document.querySelectorAll(".menu-bar-vertical span");
+const overlays = document.querySelectorAll(".overlay");
+const pageContent = document.getElementById("page-content");
+const background = document.getElementById("background-image");
+
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const targetId = item.dataset.menu;
+        overlays.forEach(overlay => overlay.classList.remove("active"));
+        if (targetId) {
+            document.getElementById(targetId).classList.add("active");
+            pageContent.classList.add("blur-page");
+            background.classList.add("blur-page");
         }
-    </script>
+    });
+});
+
+overlays.forEach(overlay => {
+    overlay.addEventListener("click", e => {
+        if (e.target === overlay) {
+            overlay.classList.remove("active");
+            pageContent.classList.remove("blur-page");
+            background.classList.remove("blur-page");
+        }
+    });
+});
+
+/* ===== TV Static ===== */
+const canvas = document.getElementById("noise");
+const ctx = canvas.getContext("2d");
+
+function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+let t = 0;
+function generateStatic() {
+    const width = canvas.width;
+    const height = canvas.height;
+    const imageData = ctx.createImageData(width, height);
+    const buffer = new Uint32Array(imageData.data.buffer);
+
+    t += 0.08;
+
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            const i = y * width + x;
+            let shade = 80 + Math.random() * 120;
+            shade += Math.sin(x * 0.12 + t) * 15;
+            shade += Math.sin((y * 0.5) + t * 2) * 5;
+            shade = Math.max(0, Math.min(255, shade));
+            buffer[i] = (255 << 24) | (shade << 16) | (shade << 8) | shade;
+        }
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+}
+
+function animate() {
+    generateStatic();
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+
 </body>
 </html>
