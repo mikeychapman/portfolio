@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-<title>'47 x Football Clubs</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Carousel Page</title>
 
 <!-- POPPINS FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     height:100%;
     font-family:'Poppins',sans-serif;
     touch-action:pan-y;
-    overflow:hidden; /* DESKTOP default */
+    overflow:hidden; /* Desktop default */
   }
 
   .frame{
@@ -107,18 +107,22 @@
     .frame{
       position:relative;
       height:auto;
-      overflow-y:auto;
+      overflow:visible; /* allow scrolling */
     }
 
     .carousel{
-      height:100vh;
-      flex:0 0 100vh;
+      height:auto;
+      flex:0 0 auto;
+    }
+
+    .carousel-track{
+      position:relative; /* remove absolute to allow carousel height */
     }
 
     .content{
       margin-left:20px;
       margin-right:20px;
-      margin-top:60px;
+      margin-top:20px;
     }
 
     .title{
@@ -164,7 +168,7 @@
     <div class="back"><a href="/index" style="text-decoration: none; color: black">BACK</a></div>
 
     <div class="content">
-      <h1 class="title">'47 Brand x Football Clubs</h1>
+      <h1 class="title">'47 Brand x Sports Clubs</h1>
       <p class="copy">
       During my time at '47 Brand, between November 2023 &amp; February 2026, I have been responsible for artworking caps and communicating with factories about the production of caps for clients such as Arsenal FC, BSC Young Boys, Ipswich FC, Nottingham Forest FC, along with numerous other sports teams.</p>
     </div>
