@@ -329,13 +329,17 @@ function resize() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 }
+
+// Re-size whenever the screen's dimensions change (including when the TV image finishes loading)
+new ResizeObserver(resize).observe(canvas);
 resize();
-window.addEventListener("resize", resize);
 
 let t = 0;
 function generateStatic() {
     const width = canvas.width;
     const height = canvas.height;
+    if (!width || !height) return; // nothing to draw yet
+
     const imageData = ctx.createImageData(width, height);
     const buffer = new Uint32Array(imageData.data.buffer);
 
@@ -347,7 +351,7 @@ function generateStatic() {
             let shade = 80 + Math.random() * 120;
             shade += Math.sin(x * 0.12 + t) * 15;
             shade += Math.sin((y * 0.5) + t * 2) * 5;
-            shade = Math.max(0, Math.min(255, shade));
+            shade = Math.max(0, Math.min(255, shade)) | 0;
             buffer[i] = (255 << 24) | (shade << 16) | (shade << 8) | shade;
         }
     }
