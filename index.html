@@ -91,6 +91,7 @@ body {
     max-height: 70%;
     z-index: 2;
     filter: grayscale(100%);
+	mix-blend-mode: screen;
 }
 
 /* ===== MENU ===== */
@@ -232,12 +233,9 @@ a2 {
 <div class="overlay" id="menu-projects">
     <div class="overlay-content">
         <a2>WORK</a2>
-        <a href="/watfordfc_away_kit">watford fc - 2026/27 away kit launch</a>
-        <a href="/watfordfc_social_rebrand">watford fc - 2026/27 social rebrand</a>
-        <a href="/watfordfootballclub">watford fc - singular designs</a>
-        <a href="/47brand_team_hats">'47 brand - team headwear</a>
-        <a href="/47Catalogues">'47 brand - catalogue headers</a>
-        <br>
+		<a href="#" data-menu="menu-watford">watford fc</a>
+		<a href="#" data-menu="menu-47brand">'47 brand</a>
+		<br>
         <a2>PERSONAL PROJECTS</a2>
         <a href="/thetoastclub">the toast club</a>
         <a href="/orbitproperty">orbit property</a>
@@ -268,6 +266,23 @@ a2 {
         <a href="/otherstadiums">other stadiums</a>
     </div>
 </div>
+	
+<div class="overlay" id="menu-watford">
+    <div class="overlay-content">
+        <a2>WATFORD FC</a2>
+        <a href="/watfordfc_away_kit">2026/27 away kit launch</a>
+        <a href="/watfordfc_social_rebrand">2026/27 social rebrand</a>
+        <a href="/watfordfootballclub">singular designs</a>
+    </div>
+</div>
+
+<div class="overlay" id="menu-47brand">
+    <div class="overlay-content">
+        <a2>'47 BRAND</a2>
+        <a href="/47brand_team_hats">team headwear</a>
+        <a href="/47Catalogues">catalogue headers</a>
+    </div>
+</div>
 
 <script>
 const menuItems = document.querySelectorAll(".menu-bar-vertical span");
@@ -294,6 +309,15 @@ overlays.forEach(overlay => {
             pageContent.classList.remove("blur-page");
             background.classList.remove("blur-page");
         }
+    });
+});
+	
+/* ===== Submenu switching ===== */
+document.querySelectorAll(".overlay-content a[data-menu]").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        overlays.forEach(overlay => overlay.classList.remove("active"));
+        document.getElementById(link.dataset.menu).classList.add("active");
     });
 });
 
